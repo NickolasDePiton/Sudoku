@@ -1,12 +1,11 @@
 
-#include "stdafx.h"
 #include <stdio.h>
 #include <stdlib.h>
 int array[9][9];
 int outputArray[9][9];
 int input_value(int x, int y, int value) {
 	int i, j;
-	// Поиск по горизонтали и вертикали 
+	// ГЏГ®ГЁГ±ГЄ ГЇГ® ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГЁ ГЁ ГўГҐГ°ГІГЁГЄГ Г«ГЁ 
 	for (i = 0; i < 9; i++) 
 	{
 		if (value == outputArray[i][y] || value == outputArray[x][i]) 
@@ -14,7 +13,7 @@ int input_value(int x, int y, int value) {
 			return 0;
 		}
 	}
-	// Сканирование малых квадратов "Судоку"
+	// Г‘ГЄГ Г­ГЁГ°Г®ГўГ Г­ГЁГҐ Г¬Г Г«Г»Гµ ГЄГўГ Г¤Г°Г ГІГ®Гў "Г‘ГіГ¤Г®ГЄГі"
 	if (x < 3) 
 	{
 		if (y < 3) 
@@ -143,7 +142,7 @@ int input_value(int x, int y, int value) {
 	}
 	return value;
 }
-// Алгоритм возврата
+// ГЂГ«ГЈГ®Г°ГЁГІГ¬ ГўГ®Г§ГўГ°Г ГІГ 
 int backtrack(int x, int y) 
 {
 	int temp, i, j;
